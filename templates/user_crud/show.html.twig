@@ -1,0 +1,46 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}UserNextp{% endblock %}
+
+{% block body %}
+    <h1>UserNextp</h1>
+
+    <table class="table">
+        <tbody>
+            <tr>
+                <th>Id</th>
+                <td>{{ user_nextp.id }}</td>
+            </tr>
+            <tr>
+                <th>Pseudo</th>
+                <td>{{ user_nextp.pseudo }}</td>
+            </tr>
+            <tr>
+                <th>Nom</th>
+                <td>{{ user_nextp.nom }}</td>
+            </tr>
+            <tr>
+                <th>Prenom</th>
+                <td>{{ user_nextp.prenom }}</td>
+            </tr>
+            <tr>
+                <th>Email</th>
+                <td>{{ user_nextp.email }}</td>
+            </tr>
+            <tr>
+                <th>Roles</th>
+                <td>{{ user_nextp.roles ? user_nextp.roles|json_encode : '' }}</td>
+            </tr>
+            <tr>
+                <th>IsVerified</th>
+                <td>{{ user_nextp.isVerified ? 'Yes' : 'No' }}</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <a href="{{ path('user_crud_index') }}">back to list</a>
+
+    <a href="{{ path('user_crud_edit', {'id': user_nextp.id}) }}">edit</a>
+
+    {{ include('user_crud/_delete_form.html.twig') }}
+{% endblock %}

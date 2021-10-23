@@ -1,0 +1,46 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}UserNextp index{% endblock %}
+
+{% block body %}
+    <h1>UserNextp index</h1>
+
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Pseudo</th>
+                <th>Nom</th>
+                <th>Prenom</th>
+                <th>Email</th>
+                <th>Roles</th>
+                <th>IsVerified</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for user_nextp in user_nextps %}
+            <tr>
+                <td>{{ user_nextp.id }}</td>
+                <td>{{ user_nextp.pseudo }}</td>
+                <td>{{ user_nextp.nom }}</td>
+                <td>{{ user_nextp.prenom }}</td>
+                <td>{{ user_nextp.email }}</td>
+                <td>{{ user_nextp.roles ? user_nextp.roles|json_encode : '' }}</td>
+                <td>{{ user_nextp.isVerified ? 'Yes' : 'No' }}</td>
+                <td>
+                    <a href="{{ path('user_crud_show', {'id': user_nextp.id}) }}">Afficher</a>
+                    <a href="{{ path('user_crud_edit', {'id': user_nextp.id}) }}">Modifier</a>
+                    <a href="{{ path('user_crud_delete', {'id': user_nextp.id}) }}">Supprimer</a>
+                </td>
+            </tr>
+        {% else %}
+            <tr>
+                <td colspan="9">Aucun utilisateur disponible</td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+    <a href="{{ path('user_crud_new') }}">Create new</a>
+{% endblock %}

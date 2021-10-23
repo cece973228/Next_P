@@ -1,0 +1,28 @@
+{% extends 'base.html.twig' %}
+
+{% block title %} Étpae 1 {% endblock %}
+
+{% block body %}
+
+<div class="container">
+    <div class="d-flex marge-nav">
+        <div class="col-4">
+             <img class="img-fluid" src="{{ asset('assets/Image/img-accueil.jpeg')}}">
+        </div>
+        <div class="jumbotron ml-5 mb-0">
+            <h1 class="display-4"> Spotify</h1>
+            <p class="lead"></p>
+            <hr class="my-4">
+
+            <div class="form-outline mb-4">
+                <input type="email" id="link1" class="form-control" />
+                <label class="form-label" for="form4Example2">Votre lien</label>
+            </div>
+            <p>L'exportation va débuter</p>
+            <p class="lead">
+                <a class="btn btn-primary btn-lg" href="#" role="button">Envoyer</a>
+            </p>
+        </div>
+    </div>
+</div>
+{% endblock %}

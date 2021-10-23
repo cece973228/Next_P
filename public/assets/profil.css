@@ -1,0 +1,12 @@
+main {
+width: 964px;
+min-height: 502px;
+margin-top: 3.7%;
+margin-left: auto;
+margin-right: auto;
+display: flex;
+background-color: #ffffff;
+border-bottom: solid 1px rgba(46, 60, 84, 0.5);
+border-left: solid 1px rgba(46, 60, 84, 0.5);
+border-right: solid 1px rgba(46, 60, 84, 0.5);
+}

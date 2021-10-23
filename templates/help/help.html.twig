@@ -1,0 +1,52 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Règlement intérieur | {{ parent() }}{% endblock %}
+
+{% block css %}
+{{ parent() }}
+<style>
+    ul > li {
+        list-style-type: none;
+        margin-bottom: 15px;
+    }
+    span {
+        display: block;
+        margin: 5px auto;
+    }
+</style>
+{% endblock %}
+
+{% block body %}
+<h1>FAQ</h1>
+
+<ul>
+    {% for i in range(1, 15) %}
+    <li>
+        <h2>{{ i }}. Lorem ipsum dolor sit amet.</h2>
+        
+        <ul>
+            <li>
+                <h3>1. Lorem ipsum dolor sit amet.</h3>
+                <span>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Porro consectetur id beatae obcaecati cupiditate voluptas, alias tenetur rerum sequi distinctio mollitia voluptate minus assumenda, minima consequuntur possimus rem harum neque!</span>
+                <span>Quaerat enim quo et accusantium sed ut in, qui nulla itaque quibusdam dignissimos ducimus fuga praesentium eveniet, expedita totam ea, magnam illum blanditiis explicabo est pariatur odit minima atque? Laudantium.</span>
+            </li>
+            <li>
+                <h3>2. Beatae velit amet vel dolores.</h3>
+                <span>Lorem ipsum dolor sit amet consectetur adipisicing elit. Deleniti dolorem nam aliquam veritatis? Quia magnam voluptatum unde modi, laudantium deserunt? Cupiditate voluptate in deleniti quas aliquid culpa repudiandae quis fugiat!</span>
+                <span>Deleniti voluptatibus totam, rem iusto nostrum nisi sapiente dolore id quisquam excepturi. Laudantium nemo deserunt consequuntur eos, necessitatibus illum similique suscipit dolorum eaque dolore doloribus quaerat explicabo. Magnam, aperiam? A.</span>
+            </li>
+            <li>
+                <h3>3. Cupiditate sapiente vero aut assumenda.</h3>
+                <span>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad sequi illum distinctio rem praesentium vel magnam voluptate, veritatis pariatur, eos hic, maiores tenetur voluptatibus officiis odit quam impedit molestias ratione!</span>
+                <span>Odit veniam vel nesciunt, in modi suscipit reprehenderit ex officia debitis soluta ullam quod. Omnis, sed dolores cupiditate accusamus rem similique dolorem est maiores, illum distinctio perspiciatis laborum nam numquam.</span>
+            </li>
+            <li>
+                <h3>4. Enim fuga voluptate molestias inventore.</h3>
+                <span>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Sed laborum est omnis amet facilis quam quibusdam earum pariatur harum, asperiores voluptas? Cum recusandae deleniti, libero rerum officiis laborum perspiciatis obcaecati.</span>
+                <span>Error, quia temporibus quidem asperiores voluptatum officia nemo excepturi velit doloribus, doloremque ullam veritatis tempora necessitatibus molestias! Commodi consequuntur, quam, fuga alias odio impedit neque sint eaque vero itaque asperiores.</span>
+            </li>
+        </ul>
+    </li>        
+    {% endfor %}
+</ul>
+{% endblock %}

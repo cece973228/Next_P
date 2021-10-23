@@ -1,0 +1,154 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Hello ProfilController!{% endblock %}
+
+{% block css %}
+
+
+  {% endblock %}
+
+{% block body %}
+<div id="Main">
+            <div id="MainContainer">
+                <div id="TabHeadersContainer">
+                    <div id="SettingsTitle" class="MyPlaylistsTitle">
+                    Profile Settings                    </div>
+                    <div id="TabsContainer">
+                        <div id="GeneralTabHeader" class="TabHeader choosenTab" tab="GeneralTabDetails">
+                        General                        </div>
+                                                <div id="SubscriptionTabHeader" class="TabHeader" tab="SubscriptionTabDetails">
+                        Subscription    
+                        </div>
+                                                <div id="ConnectionsTabHeader" class="TabHeader" tab="ConnectionTabDetails">
+                        Connections                        </div>
+                    </div>
+                </div>
+                <div id="SettingsContainer" class="scrollbarContainer">
+                    <div id="GeneralTabDetails" class="TabDetails">
+                        <div id="ChangePasswordTitle" class="TabDetailsTitle">
+                        cece                        </div>
+                        <div id="NotConnectedSection">
+                            <div id="CreateAccountButton" class="GeneralButton purpleButton">
+                                <div id="ChangePasswordLabel">
+                                    Create account                                </div>
+                            </div>
+                            <div id="LoginButton" class="GeneralButton purpleButton">
+                                <div id="ChangePasswordLabel">
+                                Login                                </div>
+                            </div>
+                        </div> 
+                        <div id="ConnectedSection" class="scrollbarContainer">
+                            <div id="ChangePasswordOpener" class="GeneralTabLink TabDetailsFunctionLink">
+                                Change Password                            </div>
+                            <div id="ChangePasswordSection">
+                                <div id="GeneralRow1" class="TabDetailsRow">
+                                    <div id="OldPasswordLabel" class="TabDetailsLabel GeneralTabLabel">
+                                        Old Password                                    </div>
+                                    <input placeholder="" class="TabDetailsInput PasswordInput" type="password" name="OldPassword" id="OldPassword" value="" size="23">    
+                                </div>
+                                <div id="GeneralRow2" class="TabDetailsRow">
+                                    <div id="NewPasswordLabel" class="TabDetailsLabel GeneralTabLabel">
+                                        New Password                                    </div>
+                                    <input placeholder="" class="TabDetailsInput PasswordInput" type="password" name="OldPassword" id="NewPassword" value="" size="23">    
+                                </div>
+                                <div id="GeneralRow3" class="TabDetailsRow">
+                                    <div id="ConfirmPasswordLabel" class="TabDetailsLabel GeneralTabLabel">
+                                        Confirm New Password                                    </div>
+                                    <input placeholder="" class="TabDetailsInput PasswordInput" type="password" name="OldPassword" id="ConfirmPassword" value="" size="23">    
+                                </div>
+                                <div id="GeneralRow4" class="TabDetailsRow">
+                                    <div id="ConfirmPasswordLabel" class="TabDetailsLabel GeneralTabLabel">
+                                    </div>
+                                    <div id="ChangePasswordButton" class="GeneralButton purpleButton">
+                                        <div id="ChangePasswordLabel">
+                                            Change Password                                        </div>
+                                    </div>
+                                </div>  
+                                <div id="GeneralRow5" class="TabDetailsRow">
+                                    <div class="TabDetailsLabel GeneralTabLabel">
+                                    </div>
+                                    <div id="ChangePasswordError" class="error GeneralButton"> </div>
+                                </div>  
+                            </div>  
+                            <div id="DeleteAccount" class="GeneralTabLink TabDetailsFunctionLink">
+                                Delete Account                            </div> 
+                            <div id="DeleteAccountSection">
+                                <div class="GeneralTabInfoLabel ApprovalInfo">
+                                    Delete account will remove your user with all your settings from our servers.                                </div> 
+                                <div class="GeneralTabInfoLabel">
+                                    Are you sure?                                </div> 
+                                <div id="DeleteYesNoButtonsSection" class="ConfirmationSection">
+                                    <input placeholder="Enter password" class="TabDetailsInput PasswordInput" type="password" name="DeletePassword" id="DeletePasswordInput" value="" size="23">    
+                                    <div id="DeleteAccountAction" class="DeleteAction purpleButton">
+                                        Delete Account                                    </div> 
+                                    <div id="DeleteCancelButton" class="alternativeButton">
+                                        Cancel                                    </div> 
+                                </div> 
+                                <div id="DeleteAccountError" class="error GeneralButton"> </div>
+                            </div> 
+                        </div> 
+                    </div>
+                    <div id="SubscriptionTabDetails" class="TabDetails">
+                        <div class="lds-eclipse"><div></div></div>
+                        <div id="SubbsriptionTabContent">
+                            <div id="SubscriptionTitle" class="TabDetailsTitle">
+                                Premium Account                            </div>
+                            <div id="SubscriptionRow1" class="TabDetailsRow">
+                                <div id="PlanTypeLabel" class="TabDetailsLabel">
+                                    Premium Plan                                </div>
+                                <div id="PlanTypeContent" class="TabDetailsContent">
+                                    
+                                </div>
+                            </div>
+                            <div id="SubscriptionRow2" class="TabDetailsRow">
+                                <div id="PlanDateLabel" class="TabDetailsLabel">
+                                    <span id="activeText">Next payment</span><span id="inactiveText">Premium Plan Ends</span>
+                                </div>
+                                <div id="PlanDateContent" class="TabDetailsContent">
+                                    
+                                </div>
+                            </div>
+                            <div id="SubscriptionRow3" class="TabDetailsRow">
+                                <div id="PaymentMethodLabel" class="TabDetailsLabel">
+                                    Payment Method                                </div>
+                                <div id="ProviderContent" class="TabDetailsContent">
+                                    PayPal                                </div>
+                            </div>
+                            <div id="RenewSubscription" class="TabDetailsFunctionLink">
+                                Renew subscription                            </div>
+                            <div id="SubscribeNow" class="TabDetailsFunctionLink">
+                                Subscribe now to our premium                            </div>
+                            <div id="CancelSubscription" class="TabDetailsFunctionLink">
+                                Cancel subscription                            </div>
+                            <div id="CancelSubscriptionSection">
+                                <div id="CancelSubscriptionInfo" class="GeneralTabInfoLabel ApprovalInfo">
+                                    Are you sure you want to cancel your subscription?                                </div> 
+                                <div class="GeneralTabInfoLabel">
+                                    Your subscription will end on <span id="endSubscriptionDate"></span>
+                                </div> 
+                                <div id="CancelSubscriptionYesNoButtonsSection" class="ConfirmationSection">
+                                    <div id="CancelSubscriptionAction" class="purpleButton DeleteAction">
+                                        Cancel subscription                                    </div> 
+                                    <div id="CancelCancelSubscriptionButton" class="alternativeButton">
+                                        Keep subscription                                    </div> 
+                                </div> 
+                                <div id="CancelSubscriptionError" class="error GeneralButton"> </div>
+                            </div>
+                            <div id="payment_history">
+                                <div id="payment_history_title">Payments history</div>
+                                <div id="invoices_parent">
+
+                                </div>
+                            </div>
+                        </div>
+                    </div> 
+                    <div id="ConnectionTabDetails" class="TabDetails">
+                        <div id="ChangePasswordTitle" class="TabDetailsTitle">
+                            Connections                        </div>
+                        <div id="ConnectionRowsContainer" class="scrollbarContainer"> 
+                        <div class="ConnectionRow " id="ConnectinosRow1"><div class="ConnectionPlatform "><div class="PlatformLogo Spotify " title="Spotify"><div class="smallIcon smallIcon2"></div></div><div class="ConnectionLabel " id="SpotifyConnectinosRow">SS</div></div><div class="DisconnectBtn " title="Disconnect"></div></div><div class="ConnectionRow " id="ConnectinosRow2"><div class="ConnectionPlatform "><div class="PlatformLogo Apple " title="Apple"><div class="smallIcon smallIcon2"></div></div><div class="ConnectionLabel " id="AppleConnectinosRow">Apple Music</div></div><div class="DisconnectBtn " title="Disconnect"></div></div></div> 
+                    </div>  
+                </div>
+            </div>
+		</div>
+{% endblock %}
